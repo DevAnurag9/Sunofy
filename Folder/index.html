@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunofy-Music Streaming</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Sunofy</a>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Search</a>
+        <a href="#">Your Library</a>
+      </nav>
+      <input
+        type="search"
+        class="search-bar"
+        placeholder="Search for Artists, Songs, or Podcasts"
+      />
+      <button class="sign-in"><a href="signin.html" style="text-decoration: none; color: white;">Sign in</a></button>
+    </header>
+
+    <main>
+      <h1>Featured Playlists</h1>
+      <div class="playlist-grid">
+        <a href="playlist1.html" class="playlist-item-link">
+          <div class="playlist-item">
+            <img src="download.jpg" alt="Hot Hits Punjabi" />
+            <h3>Hot Hits Punjabi</h3>
+            <p>Catch the hottest Punjabi tracks. Cover - Gurnazar!</p>
+          </div>
+        </a>
+        <a href="playlist2.html" class="playlist-item-link">
+          <div class="playlist-item">
+            <img src="download (1).jpg" alt="Karan Aujla Mix" />
+            <h3>Karan Aujla Mix</h3>
+            <p>Shubh, Dhanda Nyoliwala, and Amrinder Gill</p>
+          </div>
+        </a>
+        <a href="playlist3.html" class="playlist-item-link">
+          <div class="playlist-item">
+            <img src="default.jpg" alt="Diljit Dosanjh Mix" />
+            <h3>Diljit Dosanjh Mix</h3>
+            <p>Shubh, Karan Aujla, and Dhanda Nyoliwala</p>
+          </div>
+        </a>
+        <a href="playlist4.html"  class="playlist-item-link">
+          <div class="playlist-item">
+            <img src="download (2).jpg" alt="Best of Punjabi 2023" />
+            <h3>Best of Punjabi 2023</h3>
+            <p>
+              The most streamed track of 2023 on Punjabi playlist.
+            </p>
+          </div>
+        </a>
+        <a href="playlist5.html"  class="playlist-item-link">
+          <div class="playlist-item">
+            <img
+              src="ab67706f00000002a0bdc80e697bae302fc2a7eb.jpg"
+              alt="Mega Punjabi Hits"
+            />
+            <h3>Mega Punjabi Hits</h3>
+            <p>A mega mix of your Punjabi favorites from few years.</p>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <audio
+        id="myAudio"
+        src="White_Brown_Black_-_Karan_Aujla_128_Kbps.mp3"
+        preload="auto"
+      ></audio>
+      <div class="now-playing">
+        <img src="download (3).jpg" alt="Album cover" />
+        <div>
+          <h4>White Brown Black</h4>
+          <p>Karan Aujla</p>
+        </div>
+      </div>
+      <div class="player-controls">
+        <div class="controls">
+          <button>⇋</button>
+          <button>⏮</button>
+
+          <button id="playPauseBtn" onclick="togglePlayPause()">▶</button>
+
+          <button>⏭</button>
+          <button>🔁</button>
+        </div>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <div class="volume-control">
+        <span>🔊</span>
+        <input
+          type="range"
+          class="volume-slider"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.7"
+          onchange="setVolume(this.value)"
+        />
+      </div>
+    </footer>
+
+    <script>
+      function togglePlayPause() {
+        const audio = document.getElementById("myAudio");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+
+        if (audio.paused) {
+          audio.play();
+          playPauseBtn.textContent = "⏸"; 
+        } else {
+          audio.pause();
+          playPauseBtn.textContent = "▶"; 
+        }
+      }
+
+      function setVolume(value) {
+        const audio = document.getElementById("myAudio");
+        audio.volume = value;
+      }
+      
+    </script>
+  </body>
+</html>
