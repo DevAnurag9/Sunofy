@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Header styles */
+  header {
+    background-color: #000;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+  .search-bar {
+    padding: 0.5rem;
+    width: 300px;
+    background-color: #242424;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+  }
+  .sign-in {
+    padding: 0.5rem 1rem;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .sign-in:hover {
+    background-color: #1ed760;
+  }
+
+  /* Main content styles */
+  main {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #121212;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .playlist-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .playlist-item {
+    background-color: #181818;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  .playlist-item:hover {
+    background-color: #282828;
+  }
+  .playlist-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .playlist-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  .playlist-item p {
+    font-size: 0.875rem;
+    color: #b3b3b3;
+  }
+
+  /* Footer styles */
+  footer {
+    background-color: #181818;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #282828;
+  }
+  .now-playing {
+    display: flex;
+    align-items: center;
+  }
+  .now-playing img {
+    width: 56px;
+    height: 56px;
+    margin-right: 1rem;
+    border-radius: 4px;
+  }
+  .now-playing h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+  .now-playing p {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+  }
+  .controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #b3b3b3;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+  .controls button:hover {
+    color: #fff;
+  }
+  .controls button:focus {
+    outline: none;
+  }
+  .progress-bar {
+    width: 400px;
+    height: 4px;
+    background-color: #535353;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+  .progress {
+    width: 30%;
+    height: 100%;
+    background-color: #b3b3b3;
+    border-radius: 2px;
+  }
+  .volume-control {
+    display: flex;
+    align-items: center;
+  }
+  .volume-slider {
+    margin-left: 0.5rem;
+    width: 100px;
+  }
